@@ -1,7 +1,7 @@
-import {Inter} from "next/font/google";
 import "./globals.css";
+import {League_Spartan} from "next/font/google";
 
-const inter = Inter({subsets: ["latin"]});
+const league_spartan = League_Spartan({subsets: ["latin"], variable: "--font-league-spartan"});
 
 export const metadata = {
     title: "Frontend Mentor | Job Listings",
@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function RootLayout({children}) {
     return (
-        <html lang="en">
-            <body className={inter.className + " text-base"}>{children}</body>
+        <html lang="en" className={`${league_spartan.variable}`} >
+            <body className="text-base">{children}</body>
         </html>
     );
 }

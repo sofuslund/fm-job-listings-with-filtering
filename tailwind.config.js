@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,6 +18,9 @@ module.exports = {
             fontSize: {
                 base: "15px", 
             },
+            fontFamily: {
+                "league-spartan": ["var(--font-league-spartan)"],
+            }
         },
     },
     plugins: [],
