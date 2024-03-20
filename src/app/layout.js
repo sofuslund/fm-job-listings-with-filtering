@@ -1,7 +1,11 @@
 import "./globals.css";
 import {League_Spartan} from "next/font/google";
+import Image from "next/image";
 
-const league_spartan = League_Spartan({subsets: ["latin"], variable: "--font-league-spartan"});
+const league_spartan = League_Spartan({
+    subsets: ["latin"],
+    variable: "--font-league-spartan",
+});
 
 export const metadata = {
     title: "Frontend Mentor | Job Listings",
@@ -10,8 +14,22 @@ export const metadata = {
 
 export default function RootLayout({children}) {
     return (
-        <html lang="en" className={`${league_spartan.variable}`} >
-            <body className="text-base">{children}</body>
+        <html lang="en" className={`${league_spartan.variable}`}>
+            <body className="text-base">
+                <Image
+                    className="w-full h-[156px] aspect-auto md:hidden"
+                    src="/bg-header-mobile.svg"
+                    width={375}
+                    height={156}
+                ></Image>
+                <Image
+                    className="w-full h-[156px] aspect-auto hidden md:block"
+                    src="/bg-header-desktop.svg"
+                    width={1440}
+                    height={156}
+                ></Image>
+                {children}
+            </body>
         </html>
     );
 }
