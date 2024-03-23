@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function JobCard({data, addTag}) {
     const tags = [data.role, data.level, ...data.languages, ...data.tools].map(tag => {
         return (
-            <span onClick={()=>{addTag(tag)}} className="rounded-md bg-light-gray text-[1.05rem] font-bold align-sub text-cyan px-3 py-0.5 inline-block">{tag}</span>
+            <span onClick={()=>{addTag(tag)}} className="rounded-md bg-light-gray text-[1.05rem] font-bold align-sub text-cyan px-3 py-0.5 inline-block cursor-pointer">{tag}</span>
         );
     });
 
