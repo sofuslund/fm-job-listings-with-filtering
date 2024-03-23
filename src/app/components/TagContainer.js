@@ -20,7 +20,7 @@ export default function TagContainer({tags, setTags}) {
     });
 
     return (
-        <div className="bg-white relative w-[88%] mx-auto rounded-md py-6 px-5 -my-8 mb-2 flex justify-between items-center shadow-md"> 
+        <div className="bg-white relative w-[88%] mx-auto rounded-md py-6 px-5 -my-10 mb-14 flex justify-between items-center shadow-md"> 
             <div className="flex flex-wrap gap-4">{tagElms}</div>
             <span onClick={()=>setTags(new Set([]))} className="text-[1.03rem] mx-1 font-bold text-gray align-bottom h-[1.5rem] cursor-pointer">Clear</span>
         </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function JobCard({data}) {
     const tags = [data.role, data.level, ...data.languages, ...data.tools].map(tag => {
         return (
@@ -12,9 +14,9 @@ export default function JobCard({data}) {
 
     return (
         <div className={`rounded-md bg-white w-[88%] mx-auto p-6 my-10 shadow-md ${border}`}>
-            {/* <Image>
+            <Image className="rounded-full -mt-11" src={data.logo} width="45" height="45">
 
-            </Image> */}
+            </Image>
             <h2 className="text-cyan font-bold my-2">
                 {data.company}
                 {newTag}
