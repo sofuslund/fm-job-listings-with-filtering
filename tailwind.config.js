@@ -7,6 +7,9 @@ module.exports = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
+        boxShadow: {
+            "md": "0 23px 15px -7px hsl(180, 29%, 88%)",
+        },
         extend: {
             colors: {
                 "cyan": "hsl(180, 29%, 50%)",

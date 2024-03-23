@@ -23,11 +23,11 @@ export default function Home() {
         <main className="font-league-spartan">
             <TagContainer tags={tags} setTags={setTags}></TagContainer>
             
-            <div className="bg-cyan w-32 h-2"></div>
+            {/* <div className="bg-cyan w-32 h-2"></div>
             <div className="bg-light-gray-bg w-32 h-2"></div>
             <div className="bg-light-gray w-32 h-2"></div>
             <div className="bg-gray w-32 h-2"></div>
-            <div className="bg-dark-gray w-32 h-2"></div>
+            <div className="bg-dark-gray w-32 h-2"></div> */}
 
             {jobCards}
             
