@@ -3,6 +3,9 @@ import Image from "next/image";
 import {useState} from "react";
 
 import TagContainer from "@/app/components/TagContainer.js";
+import JobCard from "@/app/components/JobCard.js";
+
+import jobsData from '@/app/data.json' assert { type: 'json' };
 
 export default function Home() {
     let [tags, setTags] = useState(new Set(["Frontend", "CSS", "Javascript"]));
@@ -10,6 +13,11 @@ export default function Home() {
     function addTag(tag) {
         setTags([...tags, tag])
     }
+    const jobCards = jobsData.map(jobData => {
+        return (
+            <JobCard data={jobData}></JobCard>
+        );
+    });
 
     return (
         <main className="font-league-spartan">
@@ -21,9 +29,8 @@ export default function Home() {
             <div className="bg-gray w-32 h-2"></div>
             <div className="bg-dark-gray w-32 h-2"></div>
 
-            {/* <div className="w-[47px] h-[66px] bg-orange-400 flex justify-center">
-                <div className="w-[39px] h-[66px] bg-white rounded-[18px/18px]"></div>
-            </div> */}
+            {jobCards}
+            
         </main>
     );
 }
