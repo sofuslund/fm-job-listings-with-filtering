@@ -15,7 +15,7 @@ export default function Home() {
     }
     const jobCards = jobsData.map(jobData => {
         return (
-            <JobCard data={jobData}></JobCard>
+            <JobCard data={jobData} addTag={addTag}></JobCard>
         );
     });
 
