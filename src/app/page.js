@@ -1,13 +1,20 @@
 "use client"
 import Image from "next/image";
+import {useState} from "react";
 
 import TagContainer from "@/app/components/TagContainer.js";
 
 export default function Home() {
+    let [tags, setTags] = useState(new Set(["Frontend", "CSS", "Javascript"]));
+
+    function addTag(tag) {
+        setTags([...tags, tag])
+    }
+
     return (
         <main className="font-league-spartan">
-
-            <TagContainer className="bg-blue"></TagContainer>
+            <TagContainer tags={tags} setTags={setTags}></TagContainer>
+            
             <div className="bg-cyan w-32 h-2"></div>
             <div className="bg-light-gray-bg w-32 h-2"></div>
             <div className="bg-light-gray w-32 h-2"></div>
