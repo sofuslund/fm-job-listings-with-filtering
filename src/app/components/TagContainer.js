@@ -19,8 +19,10 @@ export default function TagContainer({tags, setTags}) {
         );
     });
 
+    const hidden = tagElms.length > 0 ? "" : "hidden";
+
     return (
-        <div className="bg-white relative w-[88%] mx-auto rounded-md py-6 px-5 -my-10 mb-14 flex justify-between items-center shadow-md"> 
+        <div className={`bg-white relative w-[88%] mx-auto rounded-md py-6 px-5 -my-10 mb-14 flex justify-between items-center shadow-md ${hidden}`}> 
             <div className="flex flex-wrap gap-4">{tagElms}</div>
             <span onClick={()=>setTags(new Set([]))} className="text-[1.03rem] mx-1 font-bold text-gray align-bottom h-[1.5rem] cursor-pointer">Clear</span>
         </div>
