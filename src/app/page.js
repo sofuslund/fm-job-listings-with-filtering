@@ -37,8 +37,9 @@ export default function Home() {
             <div className="bg-light-gray w-32 h-2"></div>
             <div className="bg-gray w-32 h-2"></div>
             <div className="bg-dark-gray w-32 h-2"></div> */}
-
-            {jobCards}
+            <div className="mt-14 md:mt-24">
+                {jobCards}
+            </div>
         </main>
     );
 }

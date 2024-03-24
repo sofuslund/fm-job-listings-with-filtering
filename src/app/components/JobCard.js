@@ -13,19 +13,23 @@ export default function JobCard({data, addTag}) {
     const featuredTag = data.featured ? <span className="bg-dark-gray text-white rounded-2xl px-2 pt-2 pb-1">FEATURED!</span> : null;
 
     return (
-        <div className={`rounded-md bg-white w-[88%] mx-auto p-6 my-10 shadow-md ${border}`}>
-            <Image className="rounded-full -mt-11" src={data.logo} width="45" height="45">
-
-            </Image>
-            <h2 className="text-cyan font-bold my-2">
-                {data.company}
-                {newTag}
-                {featuredTag}
-            </h2>
-            <h1 className="font-bold my-2" >{data.position}</h1>
-            <span className="font-semibold text-gray my-2">{data.postedAt} &#x2022; {data.contract} &#x2022; {data.location}</span>
-            <hr className="border-gray  my-4"></hr>
-            <div className="flex flex-wrap gap-4">{tags}</div>
+        <div className={`rounded-md bg-white w-[88%] mx-auto p-6 md:px-12 my-10 shadow-md md:flex gap-5 items-center justify-between ${border}`}>
+            <div className="md:flex items-center flex-shrink-0 gap-6">
+                <Image className="rounded-full -mt-11 md:mt-0 md:w-20 md:h-20" src={data.logo} width="45" height="45">
+                </Image>
+                <div>
+                    
+                    <h2 className="text-cyan font-bold my-2">
+                        {data.company}
+                        {newTag}
+                        {featuredTag}
+                    </h2>
+                    <h1 className="font-bold my-2" >{data.position}</h1>
+                    <span className="font-semibold text-gray my-2">{data.postedAt} &#x2022; {data.contract} &#x2022; {data.location}</span>
+                    <hr className="border-gray my-4 md:hidden"></hr>
+                </div>
+            </div>
+            <div className="flex flex-wrap gap-4 md:justify-end flex-shrink-[1]">{tags}</div>
         </div>
     );
 }
