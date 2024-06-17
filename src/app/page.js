@@ -8,8 +8,8 @@ import JobCard from "@/app/components/JobCard.js";
 import jobsData from "@/app/data.json" assert {type: "json"};
 
 export default function Home() {
-    const [tags, setTags] = useState(new Set(["Frontend", "CSS", "JavaScript"]));
-    // const [tags, setTags] = useState(new Set([]));
+    // const [tags, setTags] = useState(new Set(["Frontend", "CSS", "JavaScript"]));
+    const [tags, setTags] = useState(new Set([]));
 
     function addTag(tag) {
         setTags(new Set([...tags, tag]));
